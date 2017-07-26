@@ -59,3 +59,11 @@ All test files end with '_test'
 
 ##To run tests in command line: npm run test
 
+To run tests change package.json:  "test": "mocha"
+
+Assert function will have mocha record the value from the assert. 
+
+
+****
+
+_id auto given to data in collection. 
