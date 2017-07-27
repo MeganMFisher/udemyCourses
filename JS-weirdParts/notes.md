@@ -44,4 +44,50 @@ Address: {
 
 A collection of name value pairs. -simpliest JS definition.
 
-##
+##Execution Context(Global)
+
+Whenever you write code you are writting it in the Execution Context(Global)
+
+1. Global Object
+2. 'this'
+
+These two things are created by JS for you because it is in Execution Context. Created for you by JS engine. 
+
+Global object available to all code within that Execuction Context which is the Window and at the global level this and the window are the same. 
+
+**Global: "not inside a function"**
+
+When you create variables and functions that aren't inside other functions are sitting on the global object. 
+
+There is also a link to the Outer Environment but that is null at the global level. 
+
+The Execution Context is wrapping:
+
+1. Global Object
+2. 'this'
+3. Outer Environment
+4. Your Code.
+
+##The Execution Context: Creation and Hoisting. 
+
+Created Phases:
+
+  #1.Creation Phase:
+        -Global Object
+        -'this'
+        -Outer environment
+        -Setup Memory Space for Variables and Functions "Hoisting"
+
+Before your code is run JS has already set aside space for the variables and functions etc you've created. So they exsit in memory so it can access them line by line. It doesn't know what a variable's value is when it first is in the memory space so it gives all variables the value of undefined. However, functions are sitting in the memory space in their entirety. 
+
+b() //b runs function b -HOISTING
+console.log(a) //A is defined but with undefined value
+
+var a = 'Hello World!';
+
+function b() {
+    console.log('Called b!');
+}
+
+  #2.Execution Phase:
+    When your code is actually executed. 
