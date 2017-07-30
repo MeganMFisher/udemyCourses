@@ -99,3 +99,4 @@ function b() {
 Undefined: is a value in JS that means a variable hasn't been set. It is an actual value. So A is defined with undefined. 
 
 <!-- //// -->
+
