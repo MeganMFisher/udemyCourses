@@ -8,5 +8,13 @@ mongoose.connection
         console.warn('Warning', error);
 })
 
+beforeEach((done) => { //beforeEach is a hook that will be run before each test. 
+    mongoose.connection.collections.users.drop(() => {
+        //Ready to run the next test!
+        done(); 
+    }) //Direct connection to users collection. .drop() tells it to drop all records in that collection before each test. Drop accepts a callback function. Pass in done to beforeEach as parameter than invoke within the drop callback to make it so mocha doesn't run the next test before the previous one is finished. 
+
+})
+
 
 

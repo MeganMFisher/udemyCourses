@@ -12,12 +12,17 @@ describe('Creating records', () => { //describe function takes two arguments. Th
     it('saves a user', () => { //it takes same arguments as describe. It block is key to all testing in mocha. inside of every it function we make we need to have an assertion. Compairs one value to another. Mocha gives us global access to describe and it but not to an assertion. 
         const joe = new User({ name: 'Joe' })  //all it takes to create new user instance on user collection. Doesn't actually save joe to our db. Joe is just sitting in memory in our program not saved. 
 
-        joe.save(); //joe has a ton of functions attached to us and one of them is save. This will save it to the db. Our record of joe should now be inside mongo. 
+        joe.save()
+        .then(() => {
+            
+        }); //joe has a ton of functions attached to us and one of them is save. This will save it to the db. Our record of joe should now be inside mongo. Asyncronous in nature so we need to add a promise. 
 
     })
 }); 
 
 //we use commandline to run out tests. npm run test.   Go to Package.json.  "test": "mocha"
+
+
 
 
 

@@ -98,5 +98,15 @@ function b() {
 
 Undefined: is a value in JS that means a variable hasn't been set. It is an actual value. So A is defined with undefined. 
 
-<!-- //// -->
+
+
+//A hook will be executed before any test. 
+
+**beforeEach**
+
+1. beforeEach
+2. Start long running process
+.....wait.....
+3. Call 'done'
+4. Tests continue running 
 
