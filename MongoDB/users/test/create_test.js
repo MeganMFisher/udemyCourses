@@ -14,7 +14,7 @@ describe('Creating records', () => { //describe function takes two arguments. Th
 
         joe.save()
         .then(() => {
-            
+
         }); //joe has a ton of functions attached to us and one of them is save. This will save it to the db. Our record of joe should now be inside mongo. Asyncronous in nature so we need to add a promise. 
 
     })
@@ -27,3 +27,4 @@ describe('Creating records', () => { //describe function takes two arguments. Th
 
 
 
+//live-server in route.  mongod in route. 
